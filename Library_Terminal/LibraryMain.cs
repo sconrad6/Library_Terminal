@@ -9,18 +9,9 @@ namespace Library_Terminal
         {
             Console.WriteLine("Welcome to the virtual library!");
 
-            List<Music> musicList = new List<Music>();
-            MusicManager.MusicList(musicList);
-
-            foreach (Music music in musicList)
-            {
-
-                Console.WriteLine(music.Author);
-            }
-
             do
             {
-               // BookOrMusic();
+                BookOrMusic();
                 Console.WriteLine("Test");
 
 

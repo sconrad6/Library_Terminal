@@ -15,7 +15,7 @@ namespace Library_Terminal
             while (line != null)
             {
                 string[] music = line.Split('|');
-                musicList.Add(new Music(music[0], music[1], music[2], music[3])); //might need to cast as a bool and the DateTime can be parsed right here
+                musicList.Add(new Music(music[0], music[1], bool.Parse(music[2]), DateTime.Parse(music[3]))); //might need to cast as a bool and the DateTime can be parsed right here
                                                                                   // boolean is stored as  bit (0 & 1)
                                                                                   // if checked in DateTime = todays date in the text file -> hardcoded in
                                                                                   // checked out = datetime now + two weeks

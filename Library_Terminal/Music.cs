@@ -3,10 +3,10 @@ namespace Library_Terminal
 {
     class Music : LibraryInventory
     {
-        public string Due { get; set; }
-        public string StatusCheck { get; set; }
+        public DateTime Due { get; set; }
+        public bool StatusCheck { get; set; }
         
-        public Music(string title, string author, string statusCheck, string due)
+        public Music(string title, string author, bool statusCheck, DateTime due)
             : base (title, author)
 
         {
@@ -15,9 +15,9 @@ namespace Library_Terminal
 
         }
 
-        protected override string DueDate()
+        public  DateTime DueDate()
         {
-            return null;
+            return DateTime.Today;
         }
 
         protected override string Status()

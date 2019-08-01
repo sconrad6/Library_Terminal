@@ -12,6 +12,5 @@ namespace Library_Terminal
             Author = author;
         }
         protected abstract string Status();
-        protected abstract string DueDate();
     }
 }
