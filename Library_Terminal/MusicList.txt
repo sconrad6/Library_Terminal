@@ -1,0 +1,12 @@
+﻿Tesselate|alt-J|true|
+Bohemian Rhapsody|Queen|true|fvsv
+Imagine|John Lennon|true|fs
+1950's|King Princess|true|sf
+Wrapped in Piano Strings|Radical Face|true|sf
+Chasing Echos|The Lonely Biscuits|true|sf
+Bible Belt|Dry the River|true|sf
+Mykonos|Fleet Foxes|true|sf
+Shaggy|It Wasn't Me|true|sf
+I Write Sins Not Tragedies|Panic! At the Disco|true|sf
+Melencholy Hill|The Gorillaz|true|sf
+Harder, Better, Faster, Stronger|Daft Punk|true|sf
