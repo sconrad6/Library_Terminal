@@ -11,14 +11,14 @@ namespace Library_Terminal
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the virtual library!");
+            Console.WriteLine("Welcome to the virtual library!\n");
             BookManager.BookReader(bookList);
             MusicManager.MusicReader(musicList);
             do
             {
+                PrintLibrary(musicList, bookList);
                 BookOrMusic();
                 //MusicManager.ListMusic();
-                
 
             } while (Continue());
             BookManager.WriteBook(bookList);
@@ -153,6 +153,39 @@ namespace Library_Terminal
             Console.WriteLine("Please enter the title of the book you want to return");
             string userInput = Console.ReadLine();
             BookManager.ReturnBook(userInput, bookList);
+        }
+
+        public static void PrintLibrary(List<Music> musicList, List<Book> bookList)
+        {
+            Console.WriteLine("MUSIC LIBRARY");
+            string availability;
+            
+            foreach (Music music in musicList)
+            {
+                if (music.StatusCheck == true)
+                {
+                    availability = "Available";
+                }
+                else
+                {
+                    availability = "Not Available";
+                }
+                Console.WriteLine($"{music.Title} by {music.Author} is {availability}");
+            }
+
+            Console.WriteLine("BOOK LIBRARY");
+            foreach (Book book in bookList)
+            {
+                if (book.StatusCheck == true)
+                {
+                    availability = "Available";
+                }
+                else
+                {
+                    availability = "Not Available";
+                }
+                Console.WriteLine($"{book.Title} by {book.Author} is {availability}");
+            }
         }
     }
 }
