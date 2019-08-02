@@ -20,7 +20,7 @@ namespace Library_Terminal
             return DateTime.Today;
         }
 
-        protected override string Status()
+        public override string Status()
         {
             return null;
         }

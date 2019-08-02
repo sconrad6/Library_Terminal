@@ -19,9 +19,14 @@ namespace Library_Terminal
             return DateTime.Today;
         }
 
-        protected override string Status()
+        public override string Status()
         {
             return null;
         }
-    }
+
+        public override string ToString()
+        {
+            return $"{Title}|{Author}|{StatusCheck}|{Due}";
+        }
+    } 
 }

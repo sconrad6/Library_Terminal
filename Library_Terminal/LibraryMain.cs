@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Library_Terminal
 {
@@ -69,7 +70,7 @@ namespace Library_Terminal
                     MusicManager.ReturnMusic();
                     break;
                 case "add":
-                    AddMusic();
+                    AddUserMusic();
                     break;
                 case "list":
                     MusicManager.ListMusic();
@@ -121,7 +122,7 @@ namespace Library_Terminal
             return false;
         }
 
-        public static void AddMusic()
+        public static void AddUserMusic()
         {
             Console.WriteLine("Title:");
             string title = Console.ReadLine();
@@ -129,8 +130,8 @@ namespace Library_Terminal
             Console.WriteLine("Artist:");
             string artist = Console.ReadLine();
 
-            Music newMusic = new Music(title, artist, true, DateTime.Now);
-            MusicManager.AddMusic(newMusic);
+            Music userMusic = new Music(title, artist, true, DateTime.Today);
+            MusicManager.AddMusic(userMusic);
 
             Console.WriteLine($"{title} by {artist} has been added to the library");
         }

@@ -11,6 +11,6 @@ namespace Library_Terminal
             Title = title;
             Author = author;
         }
-        protected abstract string Status();
+        public abstract string Status();
     }
 }
