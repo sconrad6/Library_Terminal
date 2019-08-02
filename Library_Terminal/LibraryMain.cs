@@ -18,7 +18,7 @@ namespace Library_Terminal
             {
                 PrintLibrary(musicList, bookList);
                 BookOrMusic();
-                //MusicManager.ListMusic();
+                
 
             } while (Continue());
             BookManager.WriteBook(bookList);
@@ -31,12 +31,14 @@ namespace Library_Terminal
                 "Return a book\n" +
                 "Add a book\n" +
                 "List the book library\n" +
+                "Search by author\n" +
+                "Search by keyword\n" +
                 "Exit");
             string userInput = Console.ReadLine().ToLower(); 
             switch (userInput)
             {
                 case "check out":
-
+                    UserCheckOut(bookList);
                     break;
                 case "return":
                     ReturnUserBook(bookList);
@@ -46,6 +48,12 @@ namespace Library_Terminal
                     break;
                 case "list":
                     BookManager.ListBooks();
+                    break;
+                case "search by author":
+                    BookByAuthor(bookList);
+                    break;
+                case "search by keyword":
+                    BookByKeyword(bookList);
                     break;
                 case "exit":
                     Console.WriteLine("Goodbye!");
@@ -61,13 +69,15 @@ namespace Library_Terminal
                 "Return music\n" +
                 "Add music\n" +
                 "List the music library\n" +
+                "Search by artist" +
+                "Search by keyword\n" +
                 "Exit");
             string userInput = Console.ReadLine().ToLower(); // will either be checkout or return
 
             switch (userInput)
             {
                 case "check out":
-                    
+                    ReturnUserMusic(musicList);
                     break;
                 case "return":
                     ReturnUserMusic(musicList);
@@ -77,6 +87,12 @@ namespace Library_Terminal
                     break;
                 case "list":
                     MusicManager.ListMusic();
+                    break;
+                case "search by artist":
+                    MusicByArtist(musicList);
+                    break;
+                case "search by keyword":
+                    MusicByKeyword(musicList);
                     break;
                 case "exit":
                     Console.WriteLine("Goodbye");
@@ -186,6 +202,48 @@ namespace Library_Terminal
                 }
                 Console.WriteLine($"{book.Title} by {book.Author} is {availability}");
             }
+        }
+
+        public static void UserCheckOut(List<Book> bookList)
+        {
+            Console.WriteLine("Please enter the title of the book you want to check out");
+            string userInput = Console.ReadLine();
+            BookManager.CheckOut(bookList,userInput);
+        }
+
+        public static void UserCheckOut(List<Music> musicList)
+        {
+            Console.WriteLine("Please enter the name of the song you want to check out");
+            string userInput = Console.ReadLine();
+            MusicManager.CheckOut(musicList, userInput);
+        }
+
+        public static void BookByAuthor(List<Book> bookList)
+        {
+            Console.WriteLine("Enter the author you would like to find");
+            string userInput = Console.ReadLine();
+            BookManager.SearchArtist(userInput, bookList);
+        }
+
+        public static void MusicByArtist(List<Music> musicList)
+        {
+            Console.WriteLine("Enter the artist you would like to find");
+            string userInput = Console.ReadLine();
+            MusicManager.SearchArtist(userInput, musicList);
+        }
+
+        public static void BookByKeyword(List<Book> bookList)
+        {
+            Console.WriteLine("Enter a keyword to find a book");
+            string userInput = Console.ReadLine();
+            BookManager.SearchKeyword(userInput, bookList);
+        }
+
+        public static void MusicByKeyword(List<Music> musicList)
+        {
+            Console.WriteLine("Enter a keyword to find a song");
+            string userInput = Console.ReadLine();
+            MusicManager.SearchKeyword(userInput, musicList);
         }
     }
 }

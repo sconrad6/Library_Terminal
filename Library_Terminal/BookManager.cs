@@ -72,5 +72,46 @@ namespace Library_Terminal
             
         }
 
+        public static void CheckOut(List<Book> bookList, string userInput)
+        {
+            foreach (Book book in bookList)
+            {
+                if (userInput.Contains(book.Title) && book.StatusCheck)
+                {
+                    Console.WriteLine("Do you want to check this book out? Y/N");
+                    userInput = Console.ReadLine().ToLower();
+                    if (userInput == "y")
+                    {
+                        book.StatusCheck = false;
+                        book.Due = DateTime.Today.AddDays(14);
+                        Console.WriteLine($"{book.Title} is due on {book.Due}");
+                       
+                    }
+                    
+                }
+            }
+
+        }
+        public static void SearchArtist(string userInput, List<Book> bookList)
+        {
+            foreach (Book book in bookList)
+            {
+                if (userInput.Contains(book.Author))
+                {
+                    Console.WriteLine($"{book.Author}, {book.Title}");
+                }   
+            }
+        }
+
+        public static void SearchKeyword(string userInput, List<Book> bookList)
+        {
+            foreach (Book book in bookList)
+            {
+                if (book.Title.Contains(userInput))
+                {
+                    Console.WriteLine($"{book.Title} by {book.Author}");
+                }
+            }
+        }
     }
 }

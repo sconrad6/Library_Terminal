@@ -65,18 +65,15 @@ namespace Library_Terminal
             }
         }
 
-        public static string SearchArtist(string userInput)
+        public static void SearchArtist(string userInput, List<Music> musicList)
         {
-            List<Music> musicList = new List<Music>();
-            MusicReader(musicList);
             foreach (Music music in musicList)
             {
                 if (userInput.Contains(music.Author))
                 {
-                    return music.Author;
+                    Console.WriteLine($"{music.Title} by {music.Author}");
                 }
             }
-            return "Can't be found";
         }
 
 
@@ -93,8 +90,37 @@ namespace Library_Terminal
 
         }
 
+        public static void CheckOut(List<Music> musicList, string userInput)
+        {
+            foreach (Music music in musicList)
+            {
+                if (userInput.Contains(music.Title) && music.StatusCheck)
+                {
+                    Console.WriteLine("Do you want to check this book out? Y/N");
+                    userInput = Console.ReadLine().ToLower();
+                    if (userInput == "y")
+                    {
+                        music.StatusCheck = false;
+                        music.Due = DateTime.Today.AddDays(14);
+                        Console.WriteLine($"{music.Title} is due on {music.Due}");
 
-        //Change the due date
+                    }
+
+                }
+            }
+
+        }
+
+        public static void SearchKeyword(string userInput, List<Music> musicList)
+        {
+            foreach (Music music in musicList)
+            {
+                if (music.Title.Contains(userInput))
+                {
+                    Console.WriteLine($"{music.Title} by {music.Author}");
+                }
+            }
+        }
 
     }
 }
