@@ -12,7 +12,7 @@ namespace Library_Terminal
             do
             {
                 BookOrMusic();
-                MusicManager.ListMusic();
+                //MusicManager.ListMusic();
                 
 
             } while (Continue());
@@ -52,7 +52,7 @@ namespace Library_Terminal
 
         public static void ReturnOrCheckoutMusic()
         {
-            Console.WriteLine("Would you like to:\n " +
+            Console.WriteLine("Would you like to:\n" +
                 "Check out music\n" +
                 "Return music\n" +
                 "Add music\n" +
@@ -63,13 +63,13 @@ namespace Library_Terminal
             switch (userInput)
             {
                 case "check out":
-                    
+                    MusicManager.CheckOutMusic();
                     break;
                 case "return":
-                    
+                    MusicManager.ReturnMusic();
                     break;
                 case "add":
-
+                    AddMusic();
                     break;
                 case "list":
                     MusicManager.ListMusic();
@@ -81,7 +81,6 @@ namespace Library_Terminal
             }
         }
 
-        
         // Would you like to display a list of books or music?
         public static void BookOrMusic()
         {
@@ -120,6 +119,20 @@ namespace Library_Terminal
             }
             Console.WriteLine("Have a great day!");
             return false;
+        }
+
+        public static void AddMusic()
+        {
+            Console.WriteLine("Title:");
+            string title = Console.ReadLine();
+
+            Console.WriteLine("Artist:");
+            string artist = Console.ReadLine();
+
+            Music newMusic = new Music(title, artist, true, DateTime.Now);
+            MusicManager.AddMusic(newMusic);
+
+            Console.WriteLine($"{title} by {artist} has been added to the library");
         }
 
     }

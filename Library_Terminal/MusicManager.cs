@@ -32,12 +32,12 @@ namespace Library_Terminal
             MusicReader(musicList);
             foreach (Music music in musicList)
             {
-                Console.WriteLine($"{music.Title} by {music.Author}\n{music.StatusCheck}\n");
+                Console.WriteLine($"\n{music.Title} by {music.Author}\n{music.StatusCheck}");
             }
         }
 
         // Take a book out
-        static void TakeOutMusic()
+        public static void CheckOutMusic()
         {
 
         }
@@ -48,6 +48,12 @@ namespace Library_Terminal
 
         }
 
+        public static void AddMusic(Music newMusic)
+        {
+            StreamWriter write = new StreamWriter("../../../MovieList.txt");
+            write.WriteLine(newMusic);
+            write.Close();
+        }
         //Change the due date
 
         //Add a book to the list

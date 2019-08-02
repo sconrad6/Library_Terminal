@@ -12,7 +12,6 @@ namespace Library_Terminal
         {
             StatusCheck = statusCheck;
             Due = due;
-
         }
 
         public  DateTime DueDate()
