@@ -1,1 +1,12 @@
-﻿
+﻿Birds of America|Lorrie Moore|true|08/01/2019
+The Great Gatsby|F. Scott Fitzgerald|true|08/01/2019
+The Lord of the Rings|J. R. R. Tolkien|true|08/01/2019
+The Adventures of Huckleberry Finn|Mark Twain|true|08/01/2019
+Alice’s Adventures in Wonderland|Lewis Carroll|true|08/01/2019
+The Outsiders|S. E. Hinton|true|08/01/2019
+Animal Farm|George Orwell|true|08/01/2019
+The Sun Also Rises|Ernest Hemingway|true|08/01/2019
+The Strange Case of Dr.Jekyll and Mr.Hyde|Robert Louis Stevenson|true|08/01/2019
+Game of Thrones| George R. R. Martin|true|08/01/2019
+The Lorax| Dr.Seuss|true|08/01/2019
+The House of the Scorpion|Nancy Farmer|true|08/01/2019
