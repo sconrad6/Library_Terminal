@@ -43,10 +43,19 @@ namespace Library_Terminal
 
         }
 
-        // Return a book
-        public static void ReturnMusic()
+        // Return a music
+        public static void ReturnMusic(string userInput)
         {
-
+            List<Music> musicList = new List<Music>();
+            MusicReader(musicList);
+            foreach (Music music in musicList)
+            {
+                if (music.Title == userInput)
+                {
+                    music.Due = DateTime.Today;
+                    music.StatusCheck = true;
+                }
+            }
         }
 
         public static void AddMusic(Music userMusic)
@@ -71,10 +80,9 @@ namespace Library_Terminal
             return "Can't be found";
         }
 
+       
+
         //Change the due date
-
-        //Add a book to the lis
-
 
     }
 }

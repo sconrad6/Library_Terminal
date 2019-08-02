@@ -48,6 +48,20 @@ namespace Library_Terminal
             }
         }
 
+        public static void ReturnBook(string userInput)
+        {
+            List<Book> bookList = new List<Book>();
+            BookReader(bookList);
+            foreach (Book book in bookList)
+            {
+                if (book.Title == userInput)
+                {
+                    book.Due = DateTime.Today;
+                    book.StatusCheck = true;
+                }
+            }
+        }
+
 
     }
 }

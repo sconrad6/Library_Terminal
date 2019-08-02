@@ -65,7 +65,7 @@ namespace Library_Terminal
                     MusicManager.CheckOutMusic();
                     break;
                 case "return":
-                    MusicManager.ReturnMusic();
+                    ReturnUserMusic();
                     break;
                 case "add":
                     AddUserMusic();
@@ -147,6 +147,20 @@ namespace Library_Terminal
 
             Console.WriteLine($"{title} by {artist} has been added to the library\n");
         }
-  
+
+        public static void ReturnUserMusic()
+        {
+            Console.WriteLine("Please enter the name of the song you want to return");
+            string userInput = Console.ReadLine();
+            MusicManager.ReturnMusic(userInput);
+        }
+
+        public static void ReturnUserBook()
+        {
+            Console.WriteLine("Please enter the title of the book you want to return");
+            string userInput = Console.ReadLine();
+            BookManager.ReturnBook(userInput);
+        }
+
     }
 }
