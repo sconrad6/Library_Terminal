@@ -7,7 +7,7 @@ namespace Library_Terminal
 {
     class MusicManager
     {
-        public static List<Music> MusicList(List<Music> musicList)
+        public static List<Music> MusicReader(List<Music> musicList)
         {
             StreamReader reader = new StreamReader("../../../MusicList.txt");
             string line = reader.ReadLine();
@@ -26,9 +26,14 @@ namespace Library_Terminal
        
         }
 
-        public static void DisplayMusic()
+        public static void ListMusic()
         {
-
+            List<Music> musicList = new List<Music>();
+            MusicReader(musicList);
+            foreach (Music music in musicList)
+            {
+                Console.WriteLine($"{music.Title} by {music.Author}\n{music.StatusCheck}\n");
+            }
         }
 
         // Take a book out
