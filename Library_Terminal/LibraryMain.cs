@@ -19,8 +19,6 @@ namespace Library_Terminal
             } while (Continue());
             
         }
-
-
         public static void ReturnOrCheckoutBook()
         { 
             Console.WriteLine("Would you like to:\n" +
@@ -39,10 +37,10 @@ namespace Library_Terminal
 
                     break;
                 case "add":
-
+                    AddUserBook();
                     break;
                 case "list":
-                    
+                    BookManager.ListBooks();
                     break;
                 case "exit":
                     Console.WriteLine("Goodbye!");
@@ -133,8 +131,21 @@ namespace Library_Terminal
             Music userMusic = new Music(title, artist, true, DateTime.Today);
             MusicManager.AddMusic(userMusic);
 
-            Console.WriteLine($"{title} by {artist} has been added to the library");
+            Console.WriteLine($"{title} by {artist} has been added to the library\n");
         }
 
+        public static void AddUserBook()
+        {
+            Console.WriteLine("Title:");
+            string title = Console.ReadLine();
+
+            Console.WriteLine("Artist:");
+            string artist = Console.ReadLine();
+
+            Book userBook = new Book(title, artist, true, DateTime.Today);
+            BookManager.AddBook(userBook);
+
+            Console.WriteLine($"{title} by {artist} has been added to the library\n");
+        }
     }
 }

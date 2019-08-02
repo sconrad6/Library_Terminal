@@ -34,9 +34,17 @@ namespace Library_Terminal
         {
             List<Book> bookList = new List<Book>();
             BookReader(bookList);
-            foreach (Book music in bookList)
+            foreach (Book book in bookList)
             {
-                Console.WriteLine($"\n{music.Title} by {music.Author}\n{music.StatusCheck}");
+                Console.WriteLine($"\n{book.Title} by {book.Author}");
+            }
+        }
+
+        public static void AddBook(Book userBook)
+        {
+            using (StreamWriter writer = new StreamWriter("../../../BookList.txt", true))
+            {
+                writer.WriteLine(userBook);
             }
         }
 

@@ -8,6 +8,7 @@
   <ItemGroup>
     <None Remove="BookList.config" />
     <None Remove="MovieList.txt" />
+    <None Remove="MovieList.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="LibraryManager.cs" />

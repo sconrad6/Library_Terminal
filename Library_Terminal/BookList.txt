@@ -10,3 +10,5 @@ The Strange Case of Dr.Jekyll and Mr.Hyde|Robert Louis Stevenson|true|08/01/2019
 Game of Thrones| George R. R. Martin|true|08/01/2019
 The Lorax| Dr.Seuss|true|08/01/2019
 The House of the Scorpion|Nancy Farmer|true|08/01/2019
+Bark|Loorie Moore|True|8/2/19 12:00:00 AM
+

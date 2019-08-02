@@ -50,13 +50,10 @@ namespace Library_Terminal
 
         public static void AddMusic(Music userMusic)
         {
-            //List<Music> music = new List<Music>();
-            //music.Add(userMusic);
             using (StreamWriter writer = new StreamWriter("../../../MusicList.txt", true))
             {
                 writer.WriteLine(userMusic);
             }
-            //writer.WriteLine(userMusic.Author);
         }
         //Change the due date
 

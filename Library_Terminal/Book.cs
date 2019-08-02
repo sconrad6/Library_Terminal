@@ -24,5 +24,10 @@ namespace Library_Terminal
         {
             return null;
         }
+
+        public override string ToString()
+        {
+            return $"{Title}|{Author}|{StatusCheck}|{Due}";
+        }
     }
 }

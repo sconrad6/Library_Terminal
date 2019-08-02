@@ -11,3 +11,4 @@ I Write Sins Not Tragedies|Panic! At the Disco|true|08/01/2019
 Melencholy Hill|The Gorillaz|true|08/01/2019
 Harder, Better, Faster, Stronger|Daft Punk|true|08/01/2019
 We Are the Tide|Blind Pilot|True|8/2/19 12:00:00 AM
+
