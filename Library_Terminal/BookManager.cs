@@ -20,16 +20,8 @@ namespace Library_Terminal
             }
             reader.Close();
             return bookList;
-
         }
-        // Take a book out 
-
-        // Return a book
-
-        //Change the due date
-
-        //Add a book to the list
-
+        
         public static void ListBooks()
         {
             List<Book> bookList = new List<Book>();
@@ -46,7 +38,6 @@ namespace Library_Terminal
             {// inside foreach loop
                 writer.WriteLine(userBook);
             }
-            //close file
         }
 
         public static void ReturnBook(string userInput, List<Book> bookList)
@@ -59,6 +50,7 @@ namespace Library_Terminal
                     found = true;
                     book.StatusCheck = true;
                     book.Due = DateTime.Today;
+                    Console.WriteLine($"{book.Title} has been returned");
                 }
             }
             if (!found)

@@ -37,26 +37,23 @@ namespace Library_Terminal
             }
         }
 
-        // Take a book out
-        public static void CheckOutMusic()
-        {
-
-        }
-
         // Return a music
         public static void ReturnMusic(string userInput, List<Music> musicList)
         {
+            bool found = false;
             foreach (Music music in musicList)
             {
                 if (userInput.Contains(music.Title))
                 {
-                    music.Due = DateTime.Today;
+                    found = true;
                     music.StatusCheck = true;
+                    music.Due = DateTime.Today;
+                    Console.WriteLine($"{music.Title} has been returned");
                 }
-                else
-                {
-                    Console.WriteLine("This music is not from our library");
-                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("This song is not from our library");
             }
         }
 

@@ -67,7 +67,7 @@ namespace Library_Terminal
             switch (userInput)
             {
                 case "check out":
-                    MusicManager.CheckOutMusic();
+                    
                     break;
                 case "return":
                     ReturnUserMusic(musicList);
