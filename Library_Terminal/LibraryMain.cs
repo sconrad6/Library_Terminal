@@ -6,10 +6,14 @@ namespace Library_Terminal
 {
     class LibraryMain
     {
+        static List<Book> bookList = new List<Book>();
+        static List<Music> musicList = new List<Music>();
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the virtual library!");
-
+            BookManager.BookReader(bookList);
+            MusicManager.MusicReader(musicList);
             do
             {
                 BookOrMusic();
@@ -17,7 +21,8 @@ namespace Library_Terminal
                 
 
             } while (Continue());
-            
+            BookManager.WriteBook(bookList);
+            MusicManager.WriteMusic(musicList);
         }
         public static void ReturnOrCheckoutBook()
         { 
@@ -27,14 +32,14 @@ namespace Library_Terminal
                 "Add a book\n" +
                 "List the book library\n" +
                 "Exit");
-            string userInput = Console.ReadLine().ToLower(); // will either be checkout or return
+            string userInput = Console.ReadLine().ToLower(); 
             switch (userInput)
             {
                 case "check out":
 
                     break;
                 case "return":
-
+                    ReturnUserBook(bookList);
                     break;
                 case "add":
                     AddUserBook();
@@ -65,7 +70,7 @@ namespace Library_Terminal
                     MusicManager.CheckOutMusic();
                     break;
                 case "return":
-                    ReturnUserMusic();
+                    ReturnUserMusic(musicList);
                     break;
                 case "add":
                     AddUserMusic();
@@ -96,18 +101,6 @@ namespace Library_Terminal
                     break;
             }
         }
-
-
-        //Would you like to search for a book or music?
-
-        // would you like to search by author or keyword?
-
-        // Please select the book you want to checkout
-
-        // implement methods IsCheckedOut and maybe  DueDate
-        // and set the DueDate approproately
-
-        // would you like to continue?
         public static bool Continue()
         {
             Console.WriteLine("Would you like to continue? Y/N");
@@ -148,19 +141,18 @@ namespace Library_Terminal
             Console.WriteLine($"{title} by {artist} has been added to the library\n");
         }
 
-        public static void ReturnUserMusic()
+        public static void ReturnUserMusic(List<Music> musicList)
         {
             Console.WriteLine("Please enter the name of the song you want to return");
             string userInput = Console.ReadLine();
-            MusicManager.ReturnMusic(userInput);
+            MusicManager.ReturnMusic(userInput, musicList);
         }
 
-        public static void ReturnUserBook()
+        public static void ReturnUserBook(List<Book> bookList)
         {
             Console.WriteLine("Please enter the title of the book you want to return");
             string userInput = Console.ReadLine();
-            BookManager.ReturnBook(userInput);
+            BookManager.ReturnBook(userInput, bookList);
         }
-
     }
 }

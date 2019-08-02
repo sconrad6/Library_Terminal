@@ -15,7 +15,7 @@ namespace Library_Terminal
             while (line != null)
             {
                 string[] books = line.Split('|');
-                bookList.Add(new Book(books[0], books[1], bool.Parse(books[2]), DateTime.Parse(books[3]))); 
+                bookList.Add(new Book(books[0], books[1], bool.Parse(books[2]), DateTime.Parse(books[3])));
                 line = reader.ReadLine();
             }
             reader.Close();
@@ -42,26 +42,43 @@ namespace Library_Terminal
 
         public static void AddBook(Book userBook)
         {
-            using (StreamWriter writer = new StreamWriter("../../../BookList.txt", true))
-            {
+            using (StreamWriter writer = new StreamWriter("../../../BookList.txt", true)) // false at the end
+            {// inside foreach loop
                 writer.WriteLine(userBook);
             }
+            //close file
         }
 
-        public static void ReturnBook(string userInput)
+        public static void ReturnBook(string userInput, List<Book> bookList)
         {
-            List<Book> bookList = new List<Book>();
-            BookReader(bookList);
+            bool found = false;
             foreach (Book book in bookList)
             {
-                if (book.Title == userInput)
+                if (userInput.Contains(book.Title))
                 {
-                    book.Due = DateTime.Today;
+                    found = true;
                     book.StatusCheck = true;
+                    book.Due = DateTime.Today;
                 }
+            }
+            if (!found)
+            {
+                Console.WriteLine("This book is not from our library");
             }
         }
 
+        public static void WriteBook(List<Book> bookList)
+        {
+            using (StreamWriter writer = new StreamWriter("../../../BookList.txt", false))
+            {
+                foreach (Book book in bookList)
+                {
+                    writer.WriteLine(book);
+                }
+                writer.Close();
+            }
+            
+        }
 
     }
 }

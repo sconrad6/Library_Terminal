@@ -1,14 +1,13 @@
-﻿Birds of America|Lorrie Moore|true|08/01/2019
-The Great Gatsby|F. Scott Fitzgerald|true|08/01/2019
-The Lord of the Rings|J. R. R. Tolkien|true|08/01/2019
-The Adventures of Huckleberry Finn|Mark Twain|true|08/01/2019
-Alice’s Adventures in Wonderland|Lewis Carroll|true|08/01/2019
-The Outsiders|S. E. Hinton|true|08/01/2019
-Animal Farm|George Orwell|true|08/01/2019
-The Sun Also Rises|Ernest Hemingway|true|08/01/2019
-The Strange Case of Dr.Jekyll and Mr.Hyde|Robert Louis Stevenson|true|08/01/2019
-Game of Thrones| George R. R. Martin|true|08/01/2019
-The Lorax| Dr.Seuss|true|08/01/2019
-The House of the Scorpion|Nancy Farmer|true|08/01/2019
+Birds of America|Lorrie Moore|True|8/2/19 12:00:00 AM
+The Great Gatsby|F. Scott Fitzgerald|True|8/2/19 12:00:00 AM
+The Lord of the Rings|J. R. R. Tolkien|True|8/1/19 12:00:00 AM
+The Adventures of Huckleberry Finn|Mark Twain|True|8/1/19 12:00:00 AM
+Alice’s Adventures in Wonderland|Lewis Carroll|True|8/1/19 12:00:00 AM
+The Outsiders|S. E. Hinton|True|8/1/19 12:00:00 AM
+Animal Farm|George Orwell|True|8/1/19 12:00:00 AM
+The Sun Also Rises|Ernest Hemingway|True|8/1/19 12:00:00 AM
+The Strange Case of Dr.Jekyll and Mr.Hyde|Robert Louis Stevenson|True|8/1/19 12:00:00 AM
+Game of Thrones| George R. R. Martin|True|8/1/19 12:00:00 AM
+The Lorax| Dr.Seuss|True|8/1/19 12:00:00 AM
+The House of the Scorpion|Nancy Farmer|True|8/1/19 12:00:00 AM
 Bark|Loorie Moore|True|8/2/19 12:00:00 AM
-

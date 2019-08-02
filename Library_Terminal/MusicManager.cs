@@ -44,16 +44,18 @@ namespace Library_Terminal
         }
 
         // Return a music
-        public static void ReturnMusic(string userInput)
+        public static void ReturnMusic(string userInput, List<Music> musicList)
         {
-            List<Music> musicList = new List<Music>();
-            MusicReader(musicList);
             foreach (Music music in musicList)
             {
-                if (music.Title == userInput)
+                if (userInput.Contains(music.Title))
                 {
                     music.Due = DateTime.Today;
                     music.StatusCheck = true;
+                }
+                else
+                {
+                    Console.WriteLine("This music is not from our library");
                 }
             }
         }
@@ -80,7 +82,20 @@ namespace Library_Terminal
             return "Can't be found";
         }
 
-       
+
+        public static void WriteMusic(List<Music> musicList)
+        {
+            using (StreamWriter writer = new StreamWriter("../../../MusicList.txt", false))
+            {
+                foreach (Music music in musicList)
+                {
+                    writer.WriteLine(music);
+                }
+                writer.Close();
+            }
+
+        }
+
 
         //Change the due date
 

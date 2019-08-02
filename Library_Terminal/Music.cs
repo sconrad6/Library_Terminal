@@ -16,7 +16,7 @@ namespace Library_Terminal
             Due = due;
         }
 
-        public  DateTime DueDate()
+        public DateTime DueDate()
         {
             return DateTime.Today;
         }
