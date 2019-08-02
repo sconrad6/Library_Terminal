@@ -147,5 +147,6 @@ namespace Library_Terminal
 
             Console.WriteLine($"{title} by {artist} has been added to the library\n");
         }
+  
     }
 }

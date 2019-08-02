@@ -6,6 +6,7 @@ using System.Text;
 namespace Library_Terminal
 {
     class MusicManager
+
     {
         public static List<Music> MusicReader(List<Music> musicList)
         {
@@ -55,9 +56,26 @@ namespace Library_Terminal
                 writer.WriteLine(userMusic);
             }
         }
+
+        public static string SearchArtist(string userInput)
+        {
+            List<Music> musicList = new List<Music>();
+            MusicReader(musicList);
+            foreach (Music music in musicList)
+            {
+                if (userInput.Contains(music.Author))
+                {
+                    return music.Author;
+                }
+            }
+            return "Can't be found";
+        }
+
         //Change the due date
 
         //Add a book to the lis
+
+
     }
-    }
+}
 
