@@ -12,8 +12,8 @@ namespace Library_Terminal
             do
             {
                 BookOrMusic();
-                Console.WriteLine("Test");
-
+                MusicManager.ListMusic();
+                
 
             } while (Continue());
             
@@ -22,7 +22,12 @@ namespace Library_Terminal
 
         public static void ReturnOrCheckoutBook()
         { 
-            Console.WriteLine("Would you like to check out, return or add a book?");
+            Console.WriteLine("Would you like to:\n" +
+                "Check out a book\n" +
+                "Return a book\n" +
+                "Add a book\n" +
+                "List the book library\n" +
+                "Exit");
             string userInput = Console.ReadLine().ToLower(); // will either be checkout or return
             switch (userInput)
             {
@@ -34,13 +39,25 @@ namespace Library_Terminal
                     break;
                 case "add":
 
+                    break;
+                case "list":
+                    
+                    break;
+                case "exit":
+                    Console.WriteLine("Goodbye!");
+                    Environment.Exit(0);
                     break;
             }
         }
 
         public static void ReturnOrCheckoutMusic()
         {
-            Console.WriteLine("Would you like to check out, return, or add music?");
+            Console.WriteLine("Would you like to:\n " +
+                "Check out music\n" +
+                "Return music\n" +
+                "Add music\n" +
+                "List the music library\n" +
+                "Exit");
             string userInput = Console.ReadLine().ToLower(); // will either be checkout or return
 
             switch (userInput)
@@ -53,6 +70,13 @@ namespace Library_Terminal
                     break;
                 case "add":
 
+                    break;
+                case "list":
+                    MusicManager.ListMusic();
+                    break;
+                case "exit":
+                    Console.WriteLine("Goodbye");
+                    Environment.Exit(0);
                     break;
             }
         }

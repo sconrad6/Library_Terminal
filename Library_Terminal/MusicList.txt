@@ -1,12 +1,12 @@
-﻿Tesselate|alt-J|0|08/01/2019
-Bohemian Rhapsody|Queen|0|08/01/2019
-Imagine|John Lennon|0|08/01/2019
-1950's|King Princess|0|08/01/2019
-Wrapped in Piano Strings|Radical Face|0|08/01/2019
-Chasing Echos|The Lonely Biscuits|0|08/01/2019
-Bible Belt|Dry the River|0|08/01/2019
-Mykonos|Fleet Foxes|0|08/01/2019
-Shaggy|It Wasn't Me|0|08/01/2019
-I Write Sins Not Tragedies|Panic! At the Disco|0|08/01/2019
-Melencholy Hill|The Gorillaz|0|08/01/2019
-Harder, Better, Faster, Stronger|Daft Punk|0|08/01/2019
+﻿Tesselate|alt-J|true|08/01/2019
+Bohemian Rhapsody|Queen|true|08/01/2019
+Imagine|John Lennon|true|08/01/2019
+1950's|King Princess|true|08/01/2019
+Wrapped in Piano Strings|Radical Face|true|08/01/2019
+Chasing Echos|The Lonely Biscuits|true|08/01/2019
+Bible Belt|Dry the River|true|08/01/2019
+Mykonos|Fleet Foxes|true|08/01/2019
+Shaggy|It Wasn't Me|true|08/01/2019
+I Write Sins Not Tragedies|Panic! At the Disco|true|08/01/2019
+Melencholy Hill|The Gorillaz|true|08/01/2019
+Harder, Better, Faster, Stronger|Daft Punk|true|08/01/2019
