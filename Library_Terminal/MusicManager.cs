@@ -58,9 +58,24 @@ namespace Library_Terminal
             }
             //writer.WriteLine(userMusic.Author);
         }
+
+        public static string SearchArtist(string userInput)
+        {
+            List<Music> musicList = new List<Music>();
+            MusicReader(musicList);
+            foreach (Music music in musicList)
+            {
+                if (userInput.Contains(music.Author))
+                {
+                    return music.Author;
+                }
+            }
+            return "Can't be found";
+        }
+
         //Change the due date
 
         //Add a book to the lis
     }
-    }
+}
 
