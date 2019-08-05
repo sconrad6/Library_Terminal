@@ -48,6 +48,7 @@ namespace Library_Terminal
                     case "list all": 
                     case "list all books":
                         MediaManager.ListLibrary(bookList);
+                        ReturnOrCheckoutBook();
                         break;
                     case "author":    
                     case "search by author":

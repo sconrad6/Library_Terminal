@@ -30,7 +30,6 @@ namespace Library_Terminal
             }
             else
             {
-                Console.WriteLine("Choice not recognized. Please choose again.");
                 return false;
             }
         }
