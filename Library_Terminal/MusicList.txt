@@ -1,13 +1,13 @@
-Tesselate|alt-J|True|8/2/2019 12:00:00 AM
-Bohemian Rhapsody|Queen|True|8/1/2019 12:00:00 AM
-Imagine|John Lennon|True|8/1/2019 12:00:00 AM
-1950's|King Princess|True|8/1/2019 12:00:00 AM
-Wrapped in Piano Strings|Radical Face|True|8/1/2019 12:00:00 AM
-Chasing Echos|The Lonely Biscuits|True|8/1/2019 12:00:00 AM
-Bible Belt|Dry the River|True|8/1/2019 12:00:00 AM
-Mykonos|Fleet Foxes|True|8/1/2019 12:00:00 AM
-It Wasn't Me|Shaggy|True|8/1/2019 12:00:00 AM
-I Write Sins Not Tragedies|Panic! At the Disco|True|8/1/2019 12:00:00 AM
-Melencholy Hill|The Gorillaz|True|8/1/2019 12:00:00 AM
-Harder, Better, Faster, Stronger|Daft Punk|True|8/1/2019 12:00:00 AM
-We Are the Tide|Blind Pilot|True|8/2/2019 12:00:00 AM
+Tesselate|alt-J|True|8/2/19 12:00:00 AM
+Bohemian Rhapsody|Queen|True|8/1/19 12:00:00 AM
+Imagine|John Lennon|True|8/1/19 12:00:00 AM
+1950's|King Princess|True|8/1/19 12:00:00 AM
+Wrapped in Piano Strings|Radical Face|True|8/1/19 12:00:00 AM
+Chasing Echos|The Lonely Biscuits|True|8/1/19 12:00:00 AM
+Bible Belt|Dry the River|True|8/1/19 12:00:00 AM
+Mykonos|Fleet Foxes|True|8/1/19 12:00:00 AM
+It Wasn't Me|Shaggy|True|8/1/19 12:00:00 AM
+I Write Sins Not Tragedies|Panic! At the Disco|True|8/1/19 12:00:00 AM
+Melencholy Hill|The Gorillaz|True|8/1/19 12:00:00 AM
+Harder, Better, Faster, Stronger|Daft Punk|True|8/1/19 12:00:00 AM
+We Are the Tide|Blind Pilot|True|8/2/19 12:00:00 AM

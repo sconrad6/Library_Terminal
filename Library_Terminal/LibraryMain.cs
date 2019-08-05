@@ -30,33 +30,36 @@ namespace Library_Terminal
                 "\t[ CHECK OUT ] \t [ RETURN ] \t [ ADD ] \t [ LIST ALL BOOKS ] \n\n" +
                 "\t\t[ SEARCH BY AUTHOR ]\t[ SEARCH BY KEYWORD ]\t[ EXIT ]\n");
             string userInput = Console.ReadLine().ToLower();
-            switch (userInput)
-            {
-                case "check out":
-                    UserBookCheckOut(bookList);
-                    break;
-                case "return":
-                    ReturnUserBook(bookList);
-                    break;
-                case "add":
-                    AddUserBook();
-                    break;
-                case "list": MediaManager.ListLibrary(bookList); break;
-                case "list all": MediaManager.ListLibrary(bookList); break;
-                case "list all books": MediaManager.ListLibrary(bookList);
-                    break;
-                case "author": BookByAuthor(bookList); break;
-                case "search by author":
-                    BookByAuthor(bookList);
-                    break;
-                case "keyword": BookByKeyword(bookList); break;
-                case "search by keyword":
-                    BookByKeyword(bookList);
-                    break;
-                case "exit":
-                    Console.WriteLine("\t\t\t\tGoodbye!");
-                    Environment.Exit(0);
-                    break;
+            if (Validator.OptionValidate(userInput)) {
+                switch (userInput)
+                {
+                    case "check out":
+                        UserBookCheckOut(bookList);
+                        break;
+                    case "return":
+                        ReturnUserBook(bookList);
+                        break;
+                    case "add":
+                        AddUserBook();
+                        break;
+                    case "list": MediaManager.ListLibrary(bookList); break;
+                    case "list all": MediaManager.ListLibrary(bookList); break;
+                    case "list all books":
+                        MediaManager.ListLibrary(bookList);
+                        break;
+                    case "author": BookByAuthor(bookList); break;
+                    case "search by author":
+                        BookByAuthor(bookList);
+                        break;
+                    case "keyword": BookByKeyword(bookList); break;
+                    case "search by keyword":
+                        BookByKeyword(bookList);
+                        break;
+                    case "exit":
+                        Console.WriteLine("\t\t\t\tGoodbye!");
+                        Environment.Exit(0);
+                        break;
+                }
             }
         }
 
@@ -66,32 +69,34 @@ namespace Library_Terminal
                 "\t[ CHECK OUT ] \t [ RETURN ] \t [ ADD ] \t [ LIST ALL MUSIC ] \n\n" +
                 "\t\t[ SEARCH BY ARTIST ]\t[ SEARCH BY KEYWORD ]\t[ EXIT ]\n");
             string userInput = Console.ReadLine().ToLower(); // will either be checkout or return
-
-            switch (userInput)
-            {
-                case "check out":
-                    UserMusicCheckOut(musicList);
-                    break;
-                case "return":
-                    ReturnUserMusic(musicList);
-                    break;
-                case "add":
-                    AddUserMusic();
-                    break;
-                case "list": MediaManager.ListLibrary(musicList); break;
-                case "list all": MediaManager.ListLibrary(musicList); break;
-                case "list all music": MediaManager.ListLibrary(musicList);
-                    break;
-                case "search by artist":MusicByArtist(musicList); break;
-                case "artist": MusicByArtist(musicList); break;
-                case "keyword": MusicByKeyword(musicList); break;
-                case "search by keyword":
-                    MusicByKeyword(musicList);
-                    break;
-                case "exit":
-                    Console.WriteLine("\t\t\t\tGoodbye");
-                    Environment.Exit(0);
-                    break;
+            if (Validator.OptionValidate(userInput)) {
+                switch (userInput)
+                {
+                    case "check out":
+                        UserMusicCheckOut(musicList);
+                        break;
+                    case "return":
+                        ReturnUserMusic(musicList);
+                        break;
+                    case "add":
+                        AddUserMusic();
+                        break;
+                    case "list": MediaManager.ListLibrary(musicList); break;
+                    case "list all": MediaManager.ListLibrary(musicList); break;
+                    case "list all music":
+                        MediaManager.ListLibrary(musicList);
+                        break;
+                    case "search by artist": MusicByArtist(musicList); break;
+                    case "artist": MusicByArtist(musicList); break;
+                    case "keyword": MusicByKeyword(musicList); break;
+                    case "search by keyword":
+                        MusicByKeyword(musicList);
+                        break;
+                    case "exit":
+                        Console.WriteLine("\t\t\t\tGoodbye");
+                        Environment.Exit(0);
+                        break;
+                }
             }
         }
 
@@ -99,7 +104,7 @@ namespace Library_Terminal
         public static void BookOrMusic()
         {
             Console.WriteLine("\t\t\t   WHAT ARE YOU INTERESTED IN?\n\t\t\t[ BOOKS ]\t\t[ MUSIC ]\n");
-            string userInput = Console.ReadLine();
+            string userInput = Console.ReadLine().ToLower();
 
             switch (userInput)
             {
@@ -118,7 +123,7 @@ namespace Library_Terminal
         {
             Console.WriteLine("\n\tWOULD YOU LIKE TO CONTINUE?\t\t [ Y for yes ]\t\t[ N for no ]");
             string choice = Console.ReadLine().ToLower();
-            if (choice == "y")
+            if (choice == "y" && Validator.YesOrNo(choice))
             {
                 return true;
             }
@@ -186,14 +191,21 @@ namespace Library_Terminal
         {
             Console.WriteLine("\t\t>X< Enter the author you would like to find\n");
             string userInput = Console.ReadLine();
-            MediaManager.SearchAuthor(userInput, bookList);
+            if (Validator.AuthorValidate(bookList, userInput))
+            {
+                MediaManager.SearchAuthor(userInput, bookList);
+            }
         }
 
         public static void MusicByArtist(List<LibraryMedia> musicList)
         {
             Console.WriteLine("\t\t>X< Enter the artist you would like to find\n");
             string userInput = Console.ReadLine();
-            MediaManager.SearchAuthor(userInput, musicList);
+            if (Validator.AuthorValidate(musicList, userInput))
+            {
+
+                MediaManager.SearchAuthor(userInput, musicList);
+            }
         }
 
         public static void BookByKeyword(List<LibraryMedia> bookList)

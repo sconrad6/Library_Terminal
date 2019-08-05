@@ -11,4 +11,3 @@ Game of Thrones| George R. R. Martin|True|8/1/19 12:00:00 AM
 The Lorax| Dr.Seuss|True|8/1/19 12:00:00 AM
 The House of the Scorpion|Nancy Farmer|True|8/1/19 12:00:00 AM
 Bark|Lorrie Moore|True|8/2/19 12:00:00 AM
-

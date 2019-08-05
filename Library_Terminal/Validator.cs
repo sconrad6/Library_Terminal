@@ -44,19 +44,20 @@ namespace Library_Terminal
                     return true;
                 }
             }
+            Console.WriteLine("This author/artist cannot be found");
             return false;
         }
 
-        public static bool TitleValidate(List<LibraryMedia> list, string input)
-        {
-            foreach(LibraryMedia titles in list)
-            {
-                if (input == titles.Title)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+        //public static bool TitleValidate(List<LibraryMedia> list, string input)
+        //{
+        //    foreach(LibraryMedia titles in list)
+        //    {
+        //        if (input == titles.Title)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }
