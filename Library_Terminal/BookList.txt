@@ -1,6 +1,6 @@
-Birds of America|Lorrie Moore|False|8/16/19 12:00:00 AM
+Birds of America|Lorrie Moore|True|8/4/19 12:00:00 AM
 The Great Gatsby|F. Scott Fitzgerald|True|8/2/19 12:00:00 AM
-The Lord of the Rings|J. R. R. Tolkien|True|8/1/19 12:00:00 AM
+The Lord of the Rings|J. R. R. Tolkien|False|8/18/19 12:00:00 AM
 The Adventures of Huckleberry Finn|Mark Twain|True|8/1/19 12:00:00 AM
 Alice’s Adventures in Wonderland|Lewis Carroll|True|8/1/19 12:00:00 AM
 The Outsiders|S. E. Hinton|True|8/1/19 12:00:00 AM

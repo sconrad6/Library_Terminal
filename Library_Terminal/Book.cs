@@ -1,33 +1,18 @@
 ﻿using System;
 namespace Library_Terminal
 {
-    class Book : LibraryInventory
+    class Book : LibraryMedia
     {
-        public DateTime Due { get; set; }
-        public bool StatusCheck { get; set; }
-
-        public Book(string title, string author, bool statusCheck, DateTime due)
-            : base(title, author)
+        public Book(string title, string author, bool available, DateTime due)
+            : base (title, author, available, due)
 
         {
-            StatusCheck = statusCheck;
-            Due = due;
-
-        }
-
-        public DateTime DueDate()
-        {
-            return DateTime.Today;
-        }
-
-        public override string Status()
-        {
-            return null;
+        
         }
 
         public override string ToString()
         {
-            return $"{Title}|{Author}|{StatusCheck}|{Due}";
+            return $"{Title}|{Author}|{Available}|{Due}";
         }
     }
 }

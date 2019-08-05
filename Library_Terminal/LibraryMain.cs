@@ -6,8 +6,8 @@ namespace Library_Terminal
 {
     class LibraryMain
     {
-        static List<Book> bookList = new List<Book>();
-        static List<Music> musicList = new List<Music>();
+        static List<LibraryMedia> bookList = new List<LibraryMedia>();
+        static List<LibraryMedia> musicList = new List<LibraryMedia>();
 
         static void Main(string[] args)
         {
@@ -16,16 +16,16 @@ namespace Library_Terminal
             MusicManager.MusicReader(musicList);
             do
             {
-                PrintLibrary(musicList, bookList);
-                BookOrMusic();
                 
+                BookOrMusic();
+
 
             } while (Continue());
             BookManager.WriteBook(bookList);
             MusicManager.WriteMusic(musicList);
         }
         public static void ReturnOrCheckoutBook()
-        { 
+        {
             Console.WriteLine("Would you like to:\n" +
                 "Check out a book\n" +
                 "Return a book\n" +
@@ -34,11 +34,11 @@ namespace Library_Terminal
                 "Search by author\n" +
                 "Search by keyword\n" +
                 "Exit");
-            string userInput = Console.ReadLine().ToLower(); 
+            string userInput = Console.ReadLine().ToLower();
             switch (userInput)
             {
                 case "check out":
-                    UserCheckOut(bookList);
+                    UserBookCheckOut(bookList);
                     break;
                 case "return":
                     ReturnUserBook(bookList);
@@ -47,7 +47,7 @@ namespace Library_Terminal
                     AddUserBook();
                     break;
                 case "list":
-                    BookManager.ListBooks();
+                    MediaManager.ListLibrary(bookList);
                     break;
                 case "search by author":
                     BookByAuthor(bookList);
@@ -77,7 +77,7 @@ namespace Library_Terminal
             switch (userInput)
             {
                 case "check out":
-                    ReturnUserMusic(musicList);
+                    UserMusicCheckOut(musicList);
                     break;
                 case "return":
                     ReturnUserMusic(musicList);
@@ -86,7 +86,7 @@ namespace Library_Terminal
                     AddUserMusic();
                     break;
                 case "list":
-                    MusicManager.ListMusic();
+                    MediaManager.ListLibrary(musicList);
                     break;
                 case "search by artist":
                     MusicByArtist(musicList);
@@ -138,7 +138,7 @@ namespace Library_Terminal
             string artist = Console.ReadLine();
 
             Music userMusic = new Music(title, artist, true, DateTime.Today);
-            MusicManager.AddMusic(userMusic);
+            MediaManager.Add(userMusic);
 
             Console.WriteLine($"{title} by {artist} has been added to the library\n");
         }
@@ -152,98 +152,65 @@ namespace Library_Terminal
             string artist = Console.ReadLine();
 
             Book userBook = new Book(title, artist, true, DateTime.Today);
-            BookManager.AddBook(userBook);
+            MediaManager.Add(userBook);
 
             Console.WriteLine($"{title} by {artist} has been added to the library\n");
         }
 
-        public static void ReturnUserMusic(List<Music> musicList)
+        public static void ReturnUserMusic(List<LibraryMedia> musicList)
         {
             Console.WriteLine("Please enter the name of the song you want to return");
             string userInput = Console.ReadLine();
-            MusicManager.ReturnMusic(userInput, musicList);
+            MediaManager.Return(musicList, userInput);
         }
 
-        public static void ReturnUserBook(List<Book> bookList)
+        public static void ReturnUserBook(List<LibraryMedia> bookList)
         {
             Console.WriteLine("Please enter the title of the book you want to return");
             string userInput = Console.ReadLine();
-            BookManager.ReturnBook(userInput, bookList);
+            MediaManager.Return(bookList, userInput);
         }
 
-        public static void PrintLibrary(List<Music> musicList, List<Book> bookList)
-        {
-            Console.WriteLine("MUSIC LIBRARY");
-            string availability;
-            
-            foreach (Music music in musicList)
-            {
-                if (music.StatusCheck == true)
-                {
-                    availability = "Available";
-                }
-                else
-                {
-                    availability = "Not Available";
-                }
-                Console.WriteLine($"{music.Title} by {music.Author} is {availability}");
-            }
-
-            Console.WriteLine("BOOK LIBRARY");
-            foreach (Book book in bookList)
-            {
-                if (book.StatusCheck == true)
-                {
-                    availability = "Available";
-                }
-                else
-                {
-                    availability = "Not Available";
-                }
-                Console.WriteLine($"{book.Title} by {book.Author} is {availability}");
-            }
-        }
-
-        public static void UserCheckOut(List<Book> bookList)
+        public static void UserBookCheckOut(List<LibraryMedia> bookList)
         {
             Console.WriteLine("Please enter the title of the book you want to check out");
             string userInput = Console.ReadLine();
-            BookManager.CheckOut(bookList,userInput);
+            MediaManager.CheckOut(bookList, userInput);
         }
 
-        public static void UserCheckOut(List<Music> musicList)
+        public static void UserMusicCheckOut(List<LibraryMedia> musicList)
         {
             Console.WriteLine("Please enter the name of the song you want to check out");
             string userInput = Console.ReadLine();
-            MusicManager.CheckOut(musicList, userInput);
+            MediaManager.CheckOut(musicList, userInput);
         }
 
-        public static void BookByAuthor(List<Book> bookList)
+        public static void BookByAuthor(List<LibraryMedia> bookList)
         {
             Console.WriteLine("Enter the author you would like to find");
             string userInput = Console.ReadLine();
-            BookManager.SearchArtist(userInput, bookList);
+            MediaManager.SearchAuthor(userInput, bookList);
         }
 
-        public static void MusicByArtist(List<Music> musicList)
+        public static void MusicByArtist(List<LibraryMedia> musicList)
         {
             Console.WriteLine("Enter the artist you would like to find");
             string userInput = Console.ReadLine();
-            MusicManager.SearchArtist(userInput, musicList);
+            MediaManager.SearchAuthor(userInput, musicList);
         }
 
-        public static void BookByKeyword(List<Book> bookList)
+        public static void BookByKeyword(List<LibraryMedia> bookList)
         {
             Console.WriteLine("Enter a keyword to find a book");
             string userInput = Console.ReadLine();
-            BookManager.SearchKeyword(userInput, bookList);
+            MediaManager.SearchKeyword(userInput, bookList);
         }
 
-        public static void MusicByKeyword(List<Music> musicList)
+        public static void MusicByKeyword(List<LibraryMedia> musicList)
         {
             Console.WriteLine("Enter a keyword to find a song");
             string userInput = Console.ReadLine();
-            MusicManager.SearchKeyword(userInput, musicList);
+            MediaManager.SearchKeyword(userInput, musicList);
         }
     }
 }

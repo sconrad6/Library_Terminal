@@ -3,32 +3,19 @@ using System.Collections.Generic;
 
 namespace Library_Terminal
 {
-    class Music : LibraryInventory
-    {
-        public DateTime Due { get; set; }
-        public bool StatusCheck { get; set; }
-        
-        public Music(string title, string author, bool statusCheck, DateTime due)
-            : base (title, author)
+    class Music : LibraryMedia {
+
+        public Music(string title, string author, bool available, DateTime due)
+            : base (title, author, available, due)
 
         {
-            StatusCheck = statusCheck;
-            Due = due;
+          
         }
 
-        public DateTime DueDate()
-        {
-            return DateTime.Today;
-        }
-
-        public override string Status()
-        {
-            return null;
-        }
 
         public override string ToString()
         {
-            return $"{Title}|{Author}|{StatusCheck}|{Due}";
+            return $"{Title}|{Author}|{Available}|{Due}";
         }
     } 
 }
