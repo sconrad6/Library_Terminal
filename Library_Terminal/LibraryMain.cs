@@ -26,11 +26,13 @@ namespace Library_Terminal
         }
         public static void ReturnOrCheckoutBook()
         {
+            string userInput;
+            do 
+            {
             Console.WriteLine("\t\t  WHAT WOULD YOU LIKE TO DO IN OUR BOOK SECTION?\n\n" +
                 "\t[ CHECK OUT ] \t [ RETURN ] \t [ ADD ] \t [ LIST ALL BOOKS ] \n\n" +
                 "\t\t[ SEARCH BY AUTHOR ]\t[ SEARCH BY KEYWORD ]\t[ EXIT ]\n");
-            string userInput = Console.ReadLine().ToLower();
-            if (Validator.OptionValidate(userInput)) {
+            userInput = Console.ReadLine().ToLower();
                 switch (userInput)
                 {
                     case "check out":
@@ -60,7 +62,7 @@ namespace Library_Terminal
                         Environment.Exit(0);
                         break;
                 }
-            }
+            } while (!Validator.OptionValidate(userInput));
         }
 
         public static void ReturnOrCheckoutMusic()
@@ -69,7 +71,8 @@ namespace Library_Terminal
                 "\t[ CHECK OUT ] \t [ RETURN ] \t [ ADD ] \t [ LIST ALL MUSIC ] \n\n" +
                 "\t\t[ SEARCH BY ARTIST ]\t[ SEARCH BY KEYWORD ]\t[ EXIT ]\n");
             string userInput = Console.ReadLine().ToLower(); // will either be checkout or return
-            if (Validator.OptionValidate(userInput)) {
+            do
+            {
                 switch (userInput)
                 {
                     case "check out":
@@ -97,7 +100,7 @@ namespace Library_Terminal
                         Environment.Exit(0);
                         break;
                 }
-            }
+            } while (Validator.OptionValidate(userInput));
         }
 
         // Would you like to display a list of books or music?
