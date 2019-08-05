@@ -22,8 +22,6 @@ namespace Library_Terminal
             return bookList;
         }
         
-      
-
         public static void WriteBook(List<LibraryMedia> bookList)
         {
             using (StreamWriter writer = new StreamWriter("../../../BookList.txt", false))
@@ -34,10 +32,6 @@ namespace Library_Terminal
                 }
                 writer.Close();
             }
-            
         }
-
-       
-        
     }
 }

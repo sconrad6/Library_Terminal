@@ -1,13 +1,14 @@
-Birds of America|Lorrie Moore|True|8/4/2019 12:00:00 AM
-The Great Gatsby|F. Scott Fitzgerald|True|8/2/2019 12:00:00 AM
-The Lord of the Rings|J. R. R. Tolkien|False|8/18/2019 12:00:00 AM
-The Adventures of Huckleberry Finn|Mark Twain|True|8/1/2019 12:00:00 AM
-Alice’s Adventures in Wonderland|Lewis Carroll|True|8/1/2019 12:00:00 AM
-The Outsiders|S. E. Hinton|True|8/1/2019 12:00:00 AM
-Animal Farm|George Orwell|True|8/1/2019 12:00:00 AM
-The Sun Also Rises|Ernest Hemingway|True|8/1/2019 12:00:00 AM
-The Alchemist|Paulo Coelho|True|8/1/2019 12:00:00 AM
-Game of Thrones| George R. R. Martin|True|8/1/2019 12:00:00 AM
-The Lorax| Dr.Seuss|True|8/1/2019 12:00:00 AM
-The House of the Scorpion|Nancy Farmer|True|8/1/2019 12:00:00 AM
-Bark|Lorrie Moore|True|8/2/2019 12:00:00 AM
+Birds of America|Lorrie Moore|True|8/4/19 12:00:00 AM
+The Great Gatsby|F. Scott Fitzgerald|True|8/2/19 12:00:00 AM
+The Lord of the Rings|J. R. R. Tolkien|False|8/18/19 12:00:00 AM
+The Adventures of Huckleberry Finn|Mark Twain|True|8/1/19 12:00:00 AM
+Alice’s Adventures in Wonderland|Lewis Carroll|True|8/1/19 12:00:00 AM
+The Outsiders|S. E. Hinton|True|8/1/19 12:00:00 AM
+Animal Farm|George Orwell|True|8/1/19 12:00:00 AM
+The Sun Also Rises|Ernest Hemingway|True|8/1/19 12:00:00 AM
+The Alchemist|Paulo Coelho|True|8/1/19 12:00:00 AM
+Game of Thrones| George R. R. Martin|True|8/1/19 12:00:00 AM
+The Lorax| Dr.Seuss|True|8/1/19 12:00:00 AM
+The House of the Scorpion|Nancy Farmer|True|8/1/19 12:00:00 AM
+Bark|Lorrie Moore|True|8/2/19 12:00:00 AM
+

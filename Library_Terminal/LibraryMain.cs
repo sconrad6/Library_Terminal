@@ -18,9 +18,7 @@ namespace Library_Terminal
             MusicManager.MusicReader(musicList);
             do
             {
-                
                 BookOrMusic();
-
 
             } while (Continue());
             BookManager.WriteBook(bookList);
@@ -136,7 +134,7 @@ namespace Library_Terminal
             Console.WriteLine("\n\tArtist:");
             string artist = Console.ReadLine();
 
-            Music userMusic = new Music(title, artist, true, DateTime.Today);
+            LibraryMedia userMusic = new Music(title, artist, true, DateTime.Today);
             MediaManager.Add(userMusic);
 
             Console.WriteLine($"\n\t{title} by {artist} has been added to the library\n");
@@ -150,7 +148,7 @@ namespace Library_Terminal
             Console.WriteLine("\n\tArtist:");
             string artist = Console.ReadLine();
 
-            Book userBook = new Book(title, artist, true, DateTime.Today);
+            LibraryMedia userBook = new Book(title, artist, true, DateTime.Today);
             MediaManager.Add(userBook);
 
             Console.WriteLine($"\n\t{title} by {artist} has been added to the library\n");
