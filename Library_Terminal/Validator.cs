@@ -22,8 +22,8 @@ namespace Library_Terminal
         public static bool OptionValidate(string input)
         {
             if(input == "checkout" || input == "return" || input == "add" || 
-                input == "search by author" || input == "search by keyword" || 
-                input == "author" || input == "artist" || input == "list" || 
+                input == "search by author" || input == "search by artist"|| 
+                input == "search by keyword" || input == "author" || input == "artist" || input == "list" || 
                 input == "list all" || input == "list all music")
             {
                 return true;

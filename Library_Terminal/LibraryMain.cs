@@ -91,7 +91,8 @@ namespace Library_Terminal
                     case "list all music":
                         MediaManager.ListLibrary(musicList);
                         break;
-                    case "search by artist": 
+                    case "search by artist":
+                        MusicByArtist(musicList);
                         break;
                     case "artist":
                         MusicByArtist(musicList);
