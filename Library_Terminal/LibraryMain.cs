@@ -44,16 +44,16 @@ namespace Library_Terminal
                     case "add":
                         AddUserBook();
                         break;
-                    case "list": MediaManager.ListLibrary(bookList); break;
-                    case "list all": MediaManager.ListLibrary(bookList); break;
+                    case "list": 
+                    case "list all": 
                     case "list all books":
                         MediaManager.ListLibrary(bookList);
                         break;
-                    case "author": BookByAuthor(bookList); break;
+                    case "author":    
                     case "search by author":
                         BookByAuthor(bookList);
                         break;
-                    case "keyword": BookByKeyword(bookList); break;
+                    case "keyword":
                     case "search by keyword":
                         BookByKeyword(bookList);
                         break;
@@ -67,12 +67,13 @@ namespace Library_Terminal
 
         public static void ReturnOrCheckoutMusic()
         {
+            string userInput;
+            do
+            {
             Console.WriteLine("\t\t  WHAT WOULD YOU LIKE TO DO IN OUR MUSIC SECTION?\n\n" +
                 "\t[ CHECK OUT ] \t [ RETURN ] \t [ ADD ] \t [ LIST ALL MUSIC ] \n\n" +
                 "\t\t[ SEARCH BY ARTIST ]\t[ SEARCH BY KEYWORD ]\t[ EXIT ]\n");
-            string userInput = Console.ReadLine().ToLower(); // will either be checkout or return
-            do
-            {
+            userInput = Console.ReadLine().ToLower(); 
                 switch (userInput)
                 {
                     case "check out":
@@ -84,14 +85,17 @@ namespace Library_Terminal
                     case "add":
                         AddUserMusic();
                         break;
-                    case "list": MediaManager.ListLibrary(musicList); break;
-                    case "list all": MediaManager.ListLibrary(musicList); break;
+                    case "list": 
+                    case "list all": 
                     case "list all music":
                         MediaManager.ListLibrary(musicList);
                         break;
-                    case "search by artist": MusicByArtist(musicList); break;
-                    case "artist": MusicByArtist(musicList); break;
-                    case "keyword": MusicByKeyword(musicList); break;
+                    case "search by artist": 
+                        break;
+                    case "artist":
+                        MusicByArtist(musicList);
+                        break;
+                    case "keyword":     
                     case "search by keyword":
                         MusicByKeyword(musicList);
                         break;
@@ -100,7 +104,7 @@ namespace Library_Terminal
                         Environment.Exit(0);
                         break;
                 }
-            } while (Validator.OptionValidate(userInput));
+            } while (!Validator.OptionValidate(userInput));
         }
 
         // Would you like to display a list of books or music?

@@ -10,7 +10,7 @@ namespace Library_Terminal
         {
             foreach (LibraryMedia media in mediaList)
             {
-                Console.WriteLine($"\n\t    {media.Title} by {media.Author}.  Availablity: {media.Available}");
+                Console.WriteLine($"\n\t    {media.Title} by {media.Author}  Availablity: {media.Available}");
                 Console.WriteLine("\t|---------------------------------------------------------------------------|");
             }
             Console.WriteLine("");
